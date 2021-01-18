@@ -18,25 +18,25 @@
             <div class="header__wrapper">
                 <div class="header__logo">
                     <a href="https://tunduk.agro.gov.kg">
-                        <img src="icons/main/logo.png" alt="logotype"> Тундук
+                        <img src="icons/main/logo.png" alt="logotype"> Minagro
                     </a>
                 </div>
                 <nav class="header__navigation">
                     <ul class="header__menu">
-                        <li class="header__menu-link">
-                            <a href="pages/statistics.html">Статистика</a>
+                        <li class="header__menu-item">
+                            <a href="pages/statistics.html" class="header__menu-link">Статистика</a>
                         </li>
-                        <li class="header__menu-link">
-                            <a href="pages/querys.html">Запросы</a>
+                        <li class="header__menu-item">
+                            <a href="pages/querys.html" class="header__menu-link">Запросы</a>
                         </li>
-                        <li class="header__menu-link">
-                            <a href="pages/services.html">Сервисы</a>
+                        <li class="header__menu-item">
+                            <a href="pages/services.html" class="header__menu-link">Сервисы</a>
                         </li>
-                        <li class="header__menu-link">
-                            <a href="pages/subsystems.html">Подсистемы</a>
+                        <li class="header__menu-item">
+                            <a href="pages/subsystems.html" class="header__menu-link">Подсистемы</a>
                         </li>
-                        <li class="header__menu-link">
-                            <a href="https://212.42.106.75:4000">Вход</a>
+                        <li class="header__menu-item">
+                            <a href="https://212.42.106.75:4000" class="header__menu-link">Вход</a>
                         </li>
                     </ul>
                 </nav>
@@ -47,7 +47,7 @@
     <section class="main">
         <!-- particles.js container -->
         <div id="particles-js"></div>
-
+        <!-- particles.js container -->
         <div class="container">
             <div class="main__wrapper">
                 <div class="main__content">
@@ -58,25 +58,27 @@
                         Система «Түндүк» предназначена для повышения эффективности взаимодействия органов государственной власти между собой, значительного сокращения коррупции, а также снижения бюрократических преград для граждан и предпринимателей за счет автоматизированного
                         обмена данными.
                     </p>
-                    <a href="pages/information.html" target="_blank">
-                        <button class="btn main__about">Подробнее</button>
-                    </a>
+                    <button class="btn main__about">
+                        <a href="pages/information.html" class="main__about-link">
+                            Подробнее
+                        </a>
+                    </button>
+
                 </div>
 
                 <form class="main__form">
-                    <h2>Обратная связь</h2>
-                    <input required type="text" name="firstname" placeholder="Ваше имя">
-                    <input required type="text" name="lastname" placeholder="Ваша фамилия">
-                    <input required type="email" name="email" placeholder="Введите свой email">
-                    <textarea required name="message" id="message_area" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                    <h2 class="main__form-title">Обратная связь</h2>
+                    <input required type="text" name="firstname" placeholder="Ваше имя" required class="main__form-input">
+                    <input required type="text" name="lastname" placeholder="Ваша фамилия" required class="main__form-input">
+                    <input required type="email" name="email" placeholder="Введите свой email" required class="main__form-input">
+                    <textarea required name="message" id="message_area" cols="30" rows="10" placeholder="Ваше сообщение" required class="main__form-textarea"></textarea>
                     <button class="btn main__form-btn">Отправить</button>
                 </form>
             </div>
-
         </div>
     </section>
 
-    <section class="subsystem">
+    <!--<section class="subsystem">
         <div class="container">
             <h2 class="subsystem__title">
                 Подсистемы министерства
@@ -219,7 +221,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--main particles scripts-->
     <script src="js/particles.js"></script>
     <script src="js/chart/Chart.js"></script>
