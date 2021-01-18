@@ -1,11 +1,12 @@
 .header{
-    height: 100px;
+    min-height: 100%;
     padding: 20px 0;
     position: relative;
 
     //header wrapper
 
     &__wrapper{
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,31 +44,66 @@
         margin: 0;
         list-style-type: none;
         //list items
-
+        &-item{
+            padding: 0px 20px 0px;
+            &:last-child{
+                padding-right: 0;
+                padding-left: 20px;
+            }
+        }
         &-link{
-            &:nth-child(1n+2){
-                margin-left: 60px;
-            }
-
-            //style for link in list item
-            a{
-                color: $white;
-                font-size: 18px;
-                &:hover{
-                    text-decoration: none;
-                    color: $asbestos;
-                }
-            }
+        //style for link in list item
+        color: $white;
+        font-size: 18px;
+        &:hover{
+        text-decoration: none;
+        color: $asbestos;
+          }
         }
     }
 }
 
-.sub_header{
-    position: fixed;
-    width: 100%;
-    padding: 10px 0;
-    background-color: $black;
-    box-shadow: 0 0 20px $black;
-    height: 70px;
-    z-index: 2;
+// .sub_header{
+//     position: fixed;
+//     width: 100%;
+//     padding: 10px 0;
+//     background-color: $black;
+//     box-shadow: 0 0 20px $black;
+//     height: 70px;
+//     z-index: 2;
+// }
+
+
+@media only screen and (max-width: 600px){
+    .header{
+        &__menu{
+            width: 100%;
+            min-height: 100%;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            background-color: black;
+            flex-direction: column;
+            align-items: initial;
+            justify-content:initial;
+            padding: 10px;
+            transition: all 2s ease-in;
+            transform: translateX(0%);
+            &-item{
+                padding: 0;
+                &:last-child{
+                    padding: 0;
+                }
+            }
+            &-link{
+            //style for link in list item
+            color: $white;
+            font-size: 30px;
+            &:hover{
+            text-decoration: none;
+            color: $asbestos;
+                }
+            }
+        }
+    }
 }
