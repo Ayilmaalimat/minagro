@@ -1,0 +1,11 @@
+.btn{
+    height: 50px;
+    background-color: $silver;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    color: $white;
+    &:hover{
+        outline: none;
+    }
+}

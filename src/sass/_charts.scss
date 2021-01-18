@@ -1,0 +1,50 @@
+.charts{
+    min-height: 450px;
+    padding: 40px 0;
+    position: relative;
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 30px;
+        font-weight: 700;
+        color: $black;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    &__wrapper{
+        display: flex;
+    }
+
+    &__query, &__round, &__polar{
+        margin: auto;
+        height: 10vh;
+        width: 100vw;
+        &:nth-child(2), &:nth-child(3){
+            margin-left: 20px;
+        }
+    }
+
+    &__btn{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(44, 62, 80, 0.6);
+        box-shadow: 0px 5px #2d3436;
+        border-radius: 0;
+        transition: all 0.1s ease-in;
+        &:hover{
+            background-color: rgba(52, 73, 94,0.5);
+        }
+
+        &:active{
+            bottom: 15px;
+            box-shadow: none;
+            outline: none;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.input, .output, .forward{
+    min-height: 500px;
+    padding: 40px 0;
+
+    &__title{
+        display: block;
+        transform: translateX(30px);
+    }
+}

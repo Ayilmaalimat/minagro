@@ -1,0 +1,35 @@
+//main color
+$black: #353b48;
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $black;
+    ul{
+        padding: 0;
+    }
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+@import "colors";
+@import "buttons";
+@import "keyframes";
+@import "header";
+@import "main";
+@import "subsystem";
+@import "statistics";
+@import "work";
+@import "pages/stat";
+@import "pages/minselhos";
+@import "pages/medicine";
+@import "pages/plants";
+@import "charts";
+@import "data";
+@import "information";
+@import "querys";
+@import "services";
+@import "services/header";

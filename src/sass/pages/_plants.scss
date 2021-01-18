@@ -1,0 +1,39 @@
+.information{
+    min-height: 500px;
+    padding: 20px 0;
+
+    &__title{
+        margin: 40px 0;
+    }
+
+    &__table{
+        font-size: 14px;
+        background: white;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        th {
+            font-size: 13px;
+            font-weight: normal;
+            background: #b9c9fe;
+            border-top: 4px solid #aabcfe;
+            border-bottom: 1px solid #fff;
+            color: #039;
+            padding: 8px;
+          }
+          td {
+            background: #e8edff;
+            border-bottom: 1px solid #fff;
+            color: #669;
+            border-top: 1px solid transparent;
+            padding: 8px;
+          }
+
+          td{
+            &:hover{
+                cursor: pointer;
+                background: #ccddff;
+            }
+          }
+      }
+}
