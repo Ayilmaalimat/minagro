@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="../css/pages/Chart.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header sub_header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="https://agroprod.kg/tunduk">
+                        <img src="../icons/main/logo.png" alt="logotype">
+                        Тундук
+                    </a>
+                </div>
+                <nav class="header__navigation">
+                    <ul class="header__menu">
+                        <li class="header__menu-link">
+                            <a href="statistics.html">Статистика</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="querys.html">Запросы</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="services.html">Сервисы</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="subsystems.html">Подсистемы</a>
+                        </li>
+                        <li class="header__menu-link">
+                            <a href="https://212.42.106.75:4000">Вход</a>
+                        </li>
+                    </ul>
+                </nav>    
+            </div>           
+        </div>
+    </header>
+    
+    <section class="query">
+        <div class="container">
+            <h1 class="title">Статистика запросов</h1>
+
+            <canvas id="queryChart" width="1170" height="585"></canvas>
+
+        </div>
+    </section>
+
+    <section class="round">
+        <div class="container">
+            <h1 class="title">Обработанные данные</h1>
+
+            <canvas id="roundChart" width="1170" height="585"></canvas>
+
+        </div>
+    </section>
+
+    <section class="polar">
+        <div class="container">
+            <h1 class="title">Принятые запросы</h1>
+
+            <canvas id="polarChart" width="1170" height="585"></canvas>
+
+        </div>
+    </section>
+
+    <script src="../js/chart/Chart.js"></script>
+    <script src="../js/chart/query.js"></script>
+    <script src="../js/chart/round.js"></script>
+    <script src="../js/chart/polar.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.information{
+    min-height: 500px;
+    padding: 40px 0;
+
+    &__text1{
+        margin-top: 50px;
+        width: 900px;
+    }
+    &__text2{
+        margin-top: 15px;
+        width: 900px;
+    }
+    &__text3{
+        margin-bottom: 20px;
+        width: 900px;
+    }
+
+    &__header{
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 900;
+        color: $black;
+        position: relative;
+        cursor: pointer;
+        &::before{
+            content: '';
+            height: 7px;
+            width: 50px;
+            background-color: $black;
+            position: absolute;
+            bottom: -7px;
+            z-index: 1;
+            transition: all 0.2s ease-in-out;
+        }
+        &::after{
+            content: '';
+            height: 1px;
+            width: 200px;
+            background-color: $black;
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+            z-index: -1;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover{
+            color: $piko;
+            &::before{
+                transform: translateX(150px);
+                background-color: $piko;
+            }
+        }
+    }
+}

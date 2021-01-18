@@ -1,0 +1,40 @@
+@keyframes rotateBeforeTriangle{
+    0%{
+        transform: rotate(90deg);
+    }
+    25%{
+       transform: rotate(120deg);
+    }
+}
+
+@keyframes workStatusEnabled{
+    0%, 100%{
+        background-color: rgba(46, 204, 113,1.0);
+    }
+
+    50%{
+        background-color: rgba(46, 204, 113,0.2);
+    }
+}
+
+@keyframes workStatusDisabled{
+    0%, 100%{
+        background-color: rgba(231, 76, 60,1.0);
+    }
+
+    50%{
+        background-color: rgba(231, 76, 60,0.2);
+    }
+}
+
+@keyframes gradientButton {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -1,0 +1,80 @@
+.data{
+    min-height: 400px;
+    padding: 40px 0 20px;
+    background: url('../img/data/data.svg') center (center/cover) no-repeat;
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 30px;
+        font-weight: 700;
+        color: $white;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__header{
+        position: absolute;
+        bottom: -80px;
+    }
+
+    &__item{
+        width: 100px;
+        height: 57.735px;
+        background: $white;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(2), &:nth-child(3){
+            margin-left: 80px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: -28.8675px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 28.8675px solid $white;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -28.8675px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 28.8675px solid $white;
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        a{
+            font-size: 20px;
+            font-weight: 500;
+            color: $white;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
