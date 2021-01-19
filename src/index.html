@@ -13,8 +13,44 @@
 </head>
 
 <body>
+
+    <div class="menu__container">
+        <span class="menu-trigger">
+          <i class="menu-trigger-bar top"></i>
+          <i class="menu-trigger-bar middle"></i>
+          <i class="menu-trigger-bar bottom"></i>
+        </span>
+        <span class="close-trigger">
+          <i class="close-trigger-bar left"></i>
+          <i class="close-trigger-bar right"></i>
+        </span>
+        <div class="inner-container">
+            <i class="menu-bg top"></i>
+            <i class="menu-bg middle"></i>
+            <i class="menu-bg bottom"></i>
+          <div class="menu-container">
+            <ul class="menu">
+                <li class="header__menu-item">
+                    <a href="pages/statistics.html" class="header__menu-link">Статистика</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="pages/querys.html" class="header__menu-link">Запросы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="pages/services.html" class="header__menu-link">Сервисы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="pages/subsystems.html" class="header__menu-link">Подсистемы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://212.42.106.75:4000" class="header__menu-link">Вход</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     <header class="header">
-        <div class="container">
             <div class="header__wrapper">
                 <div class="header__logo">
                     <a href="https://tunduk.agro.gov.kg">
@@ -41,10 +77,8 @@
                     </ul>
                 </nav>
             </div>
-        </div>
-    </header>
-
-    <section class="main">
+            </header>
+            <section class="main">
         <!-- particles.js container -->
         <div id="particles-js"></div>
         <!-- particles.js container -->
@@ -58,14 +92,18 @@
                         Система «Түндүк» предназначена для повышения эффективности взаимодействия органов государственной власти между собой, значительного сокращения коррупции, а также снижения бюрократических преград для граждан и предпринимателей за счет автоматизированного
                         обмена данными.
                     </p>
+                    <button class="btn main__contact">
+                        <a href="pages/information.html" class="main__about-link">
+                            Обратная связь
+                        </a>
+                    </button>
                     <button class="btn main__about">
                         <a href="pages/information.html" class="main__about-link">
                             Подробнее
                         </a>
                     </button>
-
                 </div>
-
+    
                 <form class="main__form">
                     <h2 class="main__form-title">Обратная связь</h2>
                     <input required type="text" name="firstname" placeholder="Ваше имя" required class="main__form-input">
@@ -76,7 +114,9 @@
                 </form>
             </div>
         </div>
-    </section>
+            </section>
+        
+    
 
     <!--<section class="subsystem">
         <div class="container">
@@ -223,6 +263,11 @@
         </div>
     </section>-->
     <!--main particles scripts-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.2.0/sizzle.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/chart/Chart.js"></script>
     <script src="js/chart/query.js"></script>
