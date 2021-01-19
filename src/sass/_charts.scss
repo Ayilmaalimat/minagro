@@ -1,5 +1,4 @@
 .charts{
-    min-height: 450px;
     padding: 40px 0;
     position: relative;
 
@@ -14,20 +13,19 @@
 
     &__wrapper{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 60px;
     }
 
     &__query, &__round, &__polar{
-        margin: auto;
-        height: 10vh;
-        width: 100vw;
-        &:nth-child(2), &:nth-child(3){
-            margin-left: 20px;
-        }
+        width: 500px;
+        margin: 30px;
     }
 
     &__btn{
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
         background-color: rgba(44, 62, 80, 0.6);
@@ -45,6 +43,20 @@
         }
         &:focus{
             outline: none;
+        }
+    }
+}
+@media only screen and (max-width: 535px) {
+    .charts {
+        &__query, &__round, &__polar {
+           width: 350px;
+        }
+    }
+}
+@media only screen and (max-width: 1195px) {
+    .charts{
+        &__wrapper{
+
         }
     }
 }
