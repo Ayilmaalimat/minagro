@@ -118,3 +118,37 @@ particlesJS('particles-js',
   }
 
 );
+
+let isOpenFeedBack = false
+let isOpenBurgerMenu = false
+$('.main__contact').on('click',function(){
+  isOpenFeedBack = !isOpenFeedBack
+  if(isOpenFeedBack) {
+    $('.main__content').hide()
+    $('.main__form').removeClass('animate__bounceOut').show().addClass('animate__bounceIn')
+    $('.main__form img').show()
+    $(this).hide()
+  }
+})
+
+$('.main__form img').on('click',function(){
+  isOpenFeedBack = !isOpenFeedBack
+  if(!isOpenFeedBack) {
+    $('.main__form').removeClass('animate__bounceIn').addClass('animate__bounceOut')
+    setTimeout(()=>{
+      $('.main__content').show()
+      $(this).hide()
+      $('.main__contact').show()
+      $('.main__form').hide()
+    },600)
+
+  }
+})
+$('.menu-trigger').on('click',function(){
+  isOpenBurgerMenu = true
+  return isOpenBurgerMenu && $('.inner-container').css({"display" : "block"})
+})
+$('.close-trigger').on('click',function () {
+  isOpenBurgerMenu = false
+  return !isOpenBurgerMenu && setTimeout(()=>$('.inner-container').css({"display":"none"}),500)
+})

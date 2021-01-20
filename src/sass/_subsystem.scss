@@ -116,7 +116,6 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            margin: 0 50px;
         }
         &__menu{
             justify-content: space-around;
@@ -138,8 +137,14 @@
         }
     }
 }
-
-@media only screen and (min-width: 375px) and (max-width: 900px){
+@media only screen and (max-width: 1190px) {
+    .subsystem {
+        &__wrapper, &__menu {
+            margin: 0 20px;
+        }
+    }
+}
+@media only screen and (max-width: 900px){
     .subsystem{
         &__title{
             font-size: 24px;
@@ -149,9 +154,7 @@
             flex-direction: column;
             flex-wrap: wrap;
             margin-bottom: 0;
-            &-link{
-                margin-left: 30px;
-            }
+            text-align: center;
         }
 
         &__wrapper{
@@ -159,12 +162,10 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            margin: 0 30px;
         }
 
         &__item{
             margin: 15px 15px;
-
         }
 
     }

@@ -65,8 +65,7 @@ $zoom-slow: all 2.4s cubic-bezier(.55,0,.1,1);
 
 .menu__container{
     position: fixed;
-    min-width: 100%;
-    min-height: 100%;
+  width: 100%;
     top:0;
     left: 0;
     z-index: 999;
@@ -170,9 +169,10 @@ $zoom-slow: all 2.4s cubic-bezier(.55,0,.1,1);
 
 
 .inner-container {
+  display: none;
     position: fixed;
-  z-index: 20;
-  min-width: 100%;
+    z-index: 20;
+   min-width: 100%;
   min-height: 100%;
 }
 .menu-container {

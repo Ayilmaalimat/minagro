@@ -2,6 +2,7 @@
     min-height: 100%;
     padding: 20px 0;
     position: relative;
+    margin-bottom: 120px;
 
     //header wrapper
 
@@ -62,20 +63,25 @@
         }
     }
 }
+.menu__container{
+    display: none;
+}
+@media only screen and (max-width: 1190px) {
+        .header,.main__wrapper{
+            margin: 0 20px;
+        }
+}
 
-// .sub_header{
-//     position: fixed;
-//     width: 100%;
-//     padding: 10px 0;
-//     background-color: $black;
-//     box-shadow: 0 0 20px $black;
-//     height: 70px;
-//     z-index: 2;
-// }
+@media only screen and (max-width: 768px) {
+    .menu__container{
+        display: flex;
+    }
 
+}
+@media only screen and (max-width: 768px){
 
-@media only screen and (max-width: 600px){
     .header{
+        margin-bottom: 0;
         &__menu{
             display: none;
             width: 100%;
@@ -110,11 +116,6 @@
         
     &__logo{
         padding-left: 10px;
-        a{
-            img{
-               
-            }
-        }
     }
 
     }
