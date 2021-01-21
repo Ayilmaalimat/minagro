@@ -1,6 +1,4 @@
-particlesJS('particles-js',
-  
-  {
+const particleParams =   {
     "particles": {
       "number": {
         "value": 80,
@@ -113,11 +111,12 @@ particlesJS('particles-js',
       "background_image": "",
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",
-      "background_size": "cover"
+      "background_size": "cover",
     }
   }
 
-);
+particlesJS('particles-js',particleParams)
+
 
 let isOpenFeedBack = false
 let isOpenBurgerMenu = false
@@ -141,14 +140,26 @@ $('.main__form img').on('click',function(){
       $('.main__contact').show()
       $('.main__form').hide()
     },600)
-
   }
 })
+
+
 $('.menu-trigger').on('click',function(){
+  console.log('clicked')
+  console.log(isOpenBurgerMenu)
   isOpenBurgerMenu = true
   return isOpenBurgerMenu && $('.inner-container').css({"display" : "block"})
 })
 $('.close-trigger').on('click',function () {
   isOpenBurgerMenu = false
   return !isOpenBurgerMenu && setTimeout(()=>$('.inner-container').css({"display":"none"}),500)
+})
+
+$(window).on('scroll', function(){
+  const container = $('.menu__container')
+  if($(this).scrollTop() >= 420){
+  container.addClass('burger-menu-back')
+  }else{
+    container.removeClass('burger-menu-back')
+  }
 })

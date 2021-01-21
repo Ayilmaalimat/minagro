@@ -2,8 +2,9 @@
     min-height: 100%;
     padding: 20px 0;
     position: relative;
-    margin-bottom: 120px;
-
+    &-main{
+        margin-bottom: 120px;
+    }
     //header wrapper
 
     &__wrapper{
@@ -63,6 +64,7 @@
         }
     }
 }
+
 .menu__container{
     display: none;
 }
