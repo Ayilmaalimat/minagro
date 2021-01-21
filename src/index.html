@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Информационная система обмена данных по подведомственным структурам</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="//d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" href="css/pages/Chart.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -13,41 +14,79 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <a href="https://tunduk.agro.gov.kg">
-                        <img src="icons/main/logo.png" alt="logotype"> Тундук
-                    </a>
-                </div>
-                <nav class="header__navigation">
-                    <ul class="header__menu">
-                        <li class="header__menu-link">
-                            <a href="pages/statistics.html">Статистика</a>
-                        </li>
-                        <li class="header__menu-link">
-                            <a href="pages/querys.html">Запросы</a>
-                        </li>
-                        <li class="header__menu-link">
-                            <a href="pages/services.html">Сервисы</a>
-                        </li>
-                        <li class="header__menu-link">
-                            <a href="pages/subsystems.html">Подсистемы</a>
-                        </li>
-                        <li class="header__menu-link">
-                            <a href="https://212.42.106.75:4000">Вход</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <section class="main">
+
+    <div class="menu__container">
+        <span class="menu-trigger">
+          <i class="menu-trigger-bar top"></i>
+          <i class="menu-trigger-bar middle"></i>
+          <i class="menu-trigger-bar bottom"></i>
+        </span>
+        <span class="close-trigger">
+          <i class="close-trigger-bar left"></i>
+          <i class="close-trigger-bar right"></i>
+        </span>
+        <div class="inner-container">
+            <i class="menu-bg top"></i>
+            <i class="menu-bg middle"></i>
+            <i class="menu-bg bottom"></i>
+          <div class="menu-container">
+              <ul class="menu">
+                <li class="header__menu-item">
+                    <a href="pages/statistics.html" class="header__menu-link">Статистика</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="pages/querys.html" class="header__menu-link">Запросы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="pages/services.html" class="header__menu-link">Сервисы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="pages/subsystems.html" class="header__menu-link">Подсистемы</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="https://212.42.106.75:4000" class="header__menu-link">Вход</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+            <section class="main">
+
+                <header class="header header-main">
+                    <div class="container">
+                        <div class="header__wrapper">
+                            <div class="header__logo">
+                                <a href="https://tunduk.agro.gov.kg">
+                                    <img src="icons/main/logo.png" alt="logotype"> Minagro
+                                </a>
+                            </div>
+                            <nav class="header__navigation">
+                                <ul class="header__menu">
+                                    <li class="header__menu-item">
+                                        <a href="pages/statistics.html" class="header__menu-link">Статистика</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="pages/querys.html" class="header__menu-link">Запросы</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="pages/services.html" class="header__menu-link">Сервисы</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="pages/subsystems.html" class="header__menu-link">Подсистемы</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="https://212.42.106.75:4000" class="header__menu-link">Вход</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
         <!-- particles.js container -->
         <div id="particles-js"></div>
-
+        <!-- particles.js container -->
         <div class="container">
             <div class="main__wrapper">
                 <div class="main__content">
@@ -58,25 +97,31 @@
                         Система «Түндүк» предназначена для повышения эффективности взаимодействия органов государственной власти между собой, значительного сокращения коррупции, а также снижения бюрократических преград для граждан и предпринимателей за счет автоматизированного
                         обмена данными.
                     </p>
-                    <a href="pages/information.html" target="_blank">
-                        <button class="btn main__about">Подробнее</button>
-                    </a>
+                    <button class="btn main__contact" >
+                            Обратная связь
+                    </button>
+                    <button class="btn main__about">
+                        <a href="pages/information.html" class="main__about-link">
+                            Подробнее
+                        </a>
+                    </button>
                 </div>
-
-                <form class="main__form">
-                    <h2>Обратная связь</h2>
-                    <input required type="text" name="firstname" placeholder="Ваше имя">
-                    <input required type="text" name="lastname" placeholder="Ваша фамилия">
-                    <input required type="email" name="email" placeholder="Введите свой email">
-                    <textarea required name="message" id="message_area" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+    
+                <form class="main__form ">
+                    <div class="main__form-title"><h2>Обратная связь</h2><img src="icons/main/cancel.svg" alt=""></div>
+                    <input required type="text" name="firstname" placeholder="Ваше имя" required class="main__form-input">
+                    <input required type="text" name="lastname" placeholder="Ваша фамилия" required class="main__form-input">
+                    <input required type="email" name="email" placeholder="Введите свой email" required class="main__form-input">
+                    <textarea required name="message" id="message_area" cols="30" rows="10" placeholder="Ваше сообщение" required class="main__form-textarea"></textarea>
                     <button class="btn main__form-btn">Отправить</button>
                 </form>
             </div>
-
         </div>
-    </section>
+            </section>
+        
+    
 
-    <section class="subsystem">
+<section class="subsystem">
         <div class="container">
             <h2 class="subsystem__title">
                 Подсистемы министерства
@@ -133,36 +178,37 @@
         </div>
     </section>
 
-    <section class="statistics">
-        <div class="container">
-            <h2 class="statistics__title">Статистика запросов</h2>
-            <div class="statistics__wrapper">
-                <div class="statistics__item">
-                    <div class="statistics__item-container">
-                        <div class="statistics__image statistics__image1"></div>
-                        <h2 class="statistics__count">89</h2>
-                    </div>
-                    <h2 class="statistics__header">Принято</h2>
 
-                </div>
-                <div class="statistics__item">
-                    <div class="statistics__item-container">
-                        <div class="statistics__image statistics__image2"></div>
-                        <h2 class="statistics__count">91</h2>
-                    </div>
-                    <h2 class="statistics__header">Отправлено</h2>
-                </div>
-            </div>
+<!--    <section class="statistics">-->
+<!--        <div class="container">-->
+<!--            <h2 class="statistics__title">Статистика запросов</h2>-->
+<!--            <div class="statistics__wrapper">-->
+<!--                <div class="statistics__item">-->
+<!--                    <div class="statistics__item-container">-->
+<!--                        <div class="statistics__image statistics__image1"></div>-->
+<!--                        <h2 class="statistics__count">89</h2>-->
+<!--                    </div>-->
+<!--                    <h2 class="statistics__header">Принято</h2>-->
 
-            <div class="statistics__formed">
-                <div class="statistics__formed-container">
-                    <div class="statistics__image statistics__image3"></div>
-                    <h2 class="statistics__count">84</h2>
-                </div>
-                <h2 class="statistics__header">Сформировано</h2>
-            </div>
-        </div>
-    </section>
+<!--                </div>-->
+<!--                <div class="statistics__item">-->
+<!--                    <div class="statistics__item-container">-->
+<!--                        <div class="statistics__image statistics__image2"></div>-->
+<!--                        <h2 class="statistics__count">91</h2>-->
+<!--                    </div>-->
+<!--                    <h2 class="statistics__header">Отправлено</h2>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="statistics__formed">-->
+<!--                <div class="statistics__formed-container">-->
+<!--                    <div class="statistics__image statistics__image3"></div>-->
+<!--                    <h2 class="statistics__count">84</h2>-->
+<!--                </div>-->
+<!--                <h2 class="statistics__header">Сформировано</h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <section class="work">
         <div class="container">
@@ -199,34 +245,49 @@
         <div class="container">
             <h2 class="data__title">Данные</h2>
             <div class="data__wrapper">
-                <div class="data__item" class="tooltip fade" data-title="Система недоступна">
-                    <div class="tooltip fade" data-title="Система недоступна">
-                        <img src="icons/data/item1.png" alt="" class="data__img">
+                <div class="data__container">
+                    <div class="data__item ">
+                        <div class="tooltip fade" data-title="Система недоступна">
+                            <img src="icons/data/item1.png" alt="" class="data__img">
+                        </div>
                     </div>
-                    <h2 class="data__header"><a href="pages/data/accepted.html" target="_blank" class="tooltip fade" data-title="Система недоступна">Принятые</a></h2>
+                    <a class="data__header" href="pages/data/accepted.html" target="_blank" class="tooltip fade" data-title="Система недоступна">Принятые</a>
                 </div>
-                <div class="data__item" class="tooltip fade" data-title="Система недоступна">
-                    <div class="tooltip fade" data-title="Система недоступна">
-                        <img src="icons/data/item2.png" alt="" class="data__img">
+                <div class="data__container" >
+                    <div class="data__item " >
+                        <div class="tooltip fade" data-title="Система недоступна">
+                            <img src="icons/data/item2.png" alt="" class="data__img">
+                        </div>
                     </div>
-                    <h2 class="data__header"><a href="pages/data/received.html" target="_blank" class="tooltip fade" data-title="Система недоступна">Отправленные</a></h2>
+                    <a class="data__header" href="pages/data/received.html" target="_blank" class="tooltip fade" data-title="Система недоступна">Отправленные</a>
                 </div>
-                <div class="data__item" class="tooltip fade" data-title="Система недоступна">
-                    <div class="tooltip fade" data-title="Система недоступна">
-                        <img src="icons/data/item3.png" alt="" class="data__img">
+                <div class="data__container" >
+                    <div class="data__item " >
+                        <div class="tooltip fade" data-title="Система недоступна">
+                            <img src="icons/data/item3.png" alt="" class="data__img">
+                        </div>
                     </div>
-                    <h2 class="data__header"><a href="pages/data/search.html" target="_blank" class="tooltip fade" data-title="Система недоступна">Поиск</a></h2>
+                    <a class="data__header" href="pages/data/search.html" target="_blank" class="tooltip fade" data-title="Система недоступна">Поиск</a>
                 </div>
             </div>
         </div>
     </section>
+
+
     <!--main particles scripts-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.2.0/sizzle.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/chart/Chart.js"></script>
     <script src="js/chart/query.js"></script>
     <script src="js/chart/round.js"></script>
     <script src="js/chart/polar.js"></script>
     <script src="js/app.js"></script>
+
+
 </body>
 
 </html>

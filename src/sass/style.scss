@@ -1,5 +1,10 @@
 //main color
 $black: #353b48;
+html,body{
+    min-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -11,10 +16,13 @@ $black: #353b48;
 }
 
 .container{
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
-
+.queries__wrapper,.statistic-wrapper,.subsystem-wrapper{
+position: relative
+}
+@import "menu";
 @import "colors";
 @import "buttons";
 @import "keyframes";

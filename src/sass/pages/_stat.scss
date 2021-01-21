@@ -1,9 +1,23 @@
 .query, .round, .polar{
-    min-height: 580px;
-    padding: 40px 0;
+    position: relative;
+    max-width: 500px;
 }
-
+.statistic-main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 .title{
     margin-top: 50px;
     top: 40px;
+    color: $white-100;
+}
+
+@media only screen and (max-width: 550px) {
+    .title{
+        font-size: 24px;
+    }
+    .query, .round, .polar{
+        max-width: 400px;
+    }
 }

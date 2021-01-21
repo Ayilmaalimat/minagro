@@ -1,6 +1,4 @@
-particlesJS('particles-js',
-  
-  {
+const particleParams =   {
     "particles": {
       "number": {
         "value": 80,
@@ -16,7 +14,7 @@ particlesJS('particles-js',
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#fff"
         },
         "polygon": {
           "nb_sides": 5
@@ -28,11 +26,11 @@ particlesJS('particles-js',
         }
       },
       "opacity": {
-        "value": 0.5,
+        "value": 0.8,
         "random": false,
         "anim": {
-          "enable": false,
-          "speed": 1,
+          "enable": true,
+          "speed": 2,
           "opacity_min": 0.1,
           "sync": false
         }
@@ -42,29 +40,29 @@ particlesJS('particles-js',
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 40,
+          "speed": 740,
           "size_min": 0.1,
           "sync": false
         }
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
+        "distance": 140,
         "color": "#ffffff",
-        "opacity": 0.4,
+        "opacity": 0.5,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 4,
         "direction": "none",
         "random": false,
         "straight": false,
         "out_mode": "out",
         "attract": {
           "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
+          "rotateX": 800,
+          "rotateY": 1500
         }
       }
     },
@@ -109,12 +107,59 @@ particlesJS('particles-js',
     "retina_detect": true,
     "config_demo": {
       "hide_card": false,
-      "background_color": "#b61924",
+      "background_color": "#2980b9",
       "background_image": "",
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",
-      "background_size": "cover"
+      "background_size": "cover",
     }
   }
 
-);
+particlesJS('particles-js',particleParams)
+
+
+let isOpenFeedBack = false
+let isOpenBurgerMenu = false
+$('.main__contact').on('click',function(){
+  isOpenFeedBack = !isOpenFeedBack
+  if(isOpenFeedBack) {
+    $('.main__content').hide()
+    $('.main__form').removeClass('animate__bounceOut').show().addClass('animate__bounceIn')
+    $('.main__form img').show()
+    $(this).hide()
+  }
+})
+
+$('.main__form img').on('click',function(){
+  isOpenFeedBack = !isOpenFeedBack
+  if(!isOpenFeedBack) {
+    $('.main__form').removeClass('animate__bounceIn').addClass('animate__bounceOut')
+    setTimeout(()=>{
+      $('.main__content').show()
+      $(this).hide()
+      $('.main__contact').show()
+      $('.main__form').hide()
+    },600)
+  }
+})
+
+
+$('.menu-trigger').on('click',function(){
+  console.log('clicked')
+  console.log(isOpenBurgerMenu)
+  isOpenBurgerMenu = true
+  return isOpenBurgerMenu && $('.inner-container').css({"display" : "block"})
+})
+$('.close-trigger').on('click',function () {
+  isOpenBurgerMenu = false
+  return !isOpenBurgerMenu && setTimeout(()=>$('.inner-container').css({"display":"none"}),500)
+})
+
+$(window).on('scroll', function(){
+  const container = $('.menu__container')
+  if($(this).scrollTop() >= 420){
+  container.addClass('burger-menu-back')
+  }else{
+    container.removeClass('burger-menu-back')
+  }
+})
